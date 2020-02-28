@@ -29,7 +29,8 @@ async def on_message(message):
 
     if message.content == "!니 내 누군지 아니":
         await message.channel.send("값 저장도 안하고 대답만 하는 봇인데 그거까지 알아야겠니")
-
+    if message.content == "!앙 지뢰띠":
+        await message.channel.send("앙 지뢰봇")
     if message.content == "!탈모측정기":
         b = randint(0,10)
         await message.channel.send("너님은..")
