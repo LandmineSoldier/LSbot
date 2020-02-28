@@ -1,5 +1,6 @@
 
 import discord, asyncio
+import os
 import random
 from random import *
 
@@ -78,5 +79,5 @@ async def on_message(message):
                 await message.channel.send("훗.. 강하군..")
 
     
-
-client.run(token)
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
