@@ -5,7 +5,6 @@ import random
 from random import *
 
 
-token = "NjgxNDcwMjA4NjQ4NTQ0Mjc5.XlO_vg.4kexYlLMkqn1chxSWiMQHnyOMWc"
 client = discord.Client()
 
 @client.event
