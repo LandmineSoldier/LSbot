@@ -24,9 +24,7 @@ async def on_message(message):
         await message.channel.send("옛설!")
         
     if message.content == "!넘패드카타나":
-        await message.channel.send("자네.. 진심인가..! (3초 내에 '그렇다'라고 치세요)")
-        time.sleep(3)
-        if message.content == "그렇다":
+        
             await message.channel.send("좋다!")
             await message.channel.send("(지뢰봇이 공격하면 1초 내에 맞받아 치면 됩니다.)")
             await message.channel.send("가로 공격은 좌우 반전")
