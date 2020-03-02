@@ -34,8 +34,9 @@ async def on_message(message):
             await message.channel.send("예시:0 741 0 -> 0 147 0")
             await message.channel.send("예시:0 159 0 -> 0 753 0")
             await message.channel.send("띄어쓰기는 하지마십시오")
+            sleep(2)
             await message.channel.send("준비되었다면 3초 내에 'ready' 라고 하세요")
-            time.sleep(3)
+            sleep(3)
             if message.content == "ready":
                 await message.channel.send("3초뒤 봇의 공격이 시작됩니다!")
                 time.sleep(3)
