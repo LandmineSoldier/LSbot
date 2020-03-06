@@ -26,6 +26,9 @@ async def on_message(message):
     if message.content == "!오마에와 모 신데이루":
         await message.channel.send("나아니이이이")
         
+    if message.content == "!두유워너빌더스노우맨":
+        await message.channel.send("https://www.youtube.com/watch?v=2EkTkiHeSmI")
+        
     if message.content == "!지뢰봇":
         await message.channel.send("옛설!")
         
