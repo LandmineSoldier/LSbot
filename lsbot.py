@@ -20,13 +20,13 @@ async def on_message(message):
     if message.author.bot:
         return None
     
-        if message.content == "!메딕"
+        if message.content == "!메딕":
         await message.channel.send("I am fully char.. huuuahhh!")
 
-    if message.content == "!오마에와 모 신데이루"
+    if message.content == "!오마에와 모 신데이루":
         await message.channel.send("나아니이이이")
 
-    if messsage.conent == "!유튜브"
+    if messsage.conent == "!유튜브":
         await message.channel.send("https://www.youtube.com/")
         
     if message.content == "!지뢰봇":
