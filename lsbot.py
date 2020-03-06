@@ -26,7 +26,7 @@ async def on_message(message):
     if message.content == "!오마에와 모 신데이루":
         await message.channel.send("나아니이이이")
 
-    if messsage.conent == "!유튜브":
+    if message.conent == "!유튜브":
         await message.channel.send("https://www.youtube.com/")
         
     if message.content == "!지뢰봇":
