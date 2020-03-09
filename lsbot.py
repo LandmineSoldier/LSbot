@@ -20,7 +20,10 @@ async def on_message(message):
     if message.author.bot:
         return None
     
-        if message.content == "!메딕":
+    if message.content == "!테스트"
+        await message.channel.send("<@"+id+">님이 \" "+message.content+"\"라고 말했습니다.")
+    
+    if message.content == "!메딕":
         await message.channel.send("I am fully char.. huuuahhh!")
 
     if message.content == "!오마에와 모 신데이루":
