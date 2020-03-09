@@ -19,9 +19,8 @@ async def on_ready():
 async def on_message(message):
     if message.author.bot:
         return None
-    
-    if message.content == "!테스트":
-        await message.channel.send("<@"+id+">님이 \" "+message.content+"\"라고 말했습니다.")
+  
+    #made by LandmineSoldier (지뢰군인)
     
     if message.content == "!메딕":
         await message.channel.send("I am fully char.. huuuahhh!")
