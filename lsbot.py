@@ -46,10 +46,15 @@ async def on_message(message):
     if message.content == "!콜라":
         a = randint(0,1)
         if a == 0:
-            await message.channel.send("https://3z61v51uhgnmmsubi1n0uv6r-wpengine.netdna-ssl.com/wp-content/uploads/2020/02/what-you-can-see-from-coca-colas-digital-marketing-strategy-840x400.jpg")
+            embed=discord.Embed(title="코카콜라", description="", color=0xFF7F7F)
+            embed.set_thumbnail(url="https://3z61v51uhgnmmsubi1n0uv6r-wpengine.netdna-ssl.com/wp-content/uploads/2020/02/what-you-can-see-from-coca-colas-digital-marketing-strategy-840x400.jpg")
+            embed.add_field(name="나이스!", value="콜라는 역시", inline=True)
+            await message.channel.send(embed=embed)
         else:
-            await message.channel.send("https://thehealthradar.com/wp-content/uploads/2020/01/pepsi-thats-what-i-like-videos.jpg")
-            await message.channel.send("( ͡° ͜ʖ ͡°)")
+            embed=discord.Embed(title="펩시", description="", color=0x7F7FFF)
+            embed.set_thumbnail(url="https://thehealthradar.com/wp-content/uploads/2020/01/pepsi-thats-what-i-like-videos.jpg")
+            embed.add_field(name="하하!", value=" ( ͡° ͜ʖ ͡°)", inline=True)
+            await message.channel.send(embed=embed)
 
     if message.content == "!니 내 누군지 아니":
         await message.channel.send("값 저장도 안하고 대답만 하는 봇인데 그거까지 알아야겠니")
