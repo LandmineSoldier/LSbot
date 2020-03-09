@@ -22,14 +22,23 @@ async def on_message(message):
   
     #made by LandmineSoldier (지뢰군인)
     
-    if message.content == "!메딕":
-        await message.channel.send("I am fully char.. huuuahhh!")
+    if message.content.startswith("!도와줘"):
+        embed=discord.Embed(title="지뢰봇", description="지뢰봇 명령어들", color=0xff6600)
+        embed.set_author(name="made by 지뢰군인", url="https://steamcommunity.com/id/LandmineSoldier/", icon_url="https://cdn.discordapp.com/app-icons/681470208648544279/3194ed1f665a08c5431ff9f009b5dd61.png?size=64")
+        embed.set_thumbnail(url="https://cdn.discordapp.com/app-icons/681470208648544279/3194ed1f665a08c5431ff9f009b5dd61.png?size=256")
+        embed.add_field(name="너는 이미 죽어있다", value="단순반응", inline=True)
+        embed.add_field(name="!지뢰봇", value="단순반응", inline=True)
+        embed.add_field(name="!콜라", value="코카콜라vs펩시", inline=True)
+        embed.add_field(name="!니 내 누군지 아니", value="단순반응", inline=True)
+        embed.add_field(name="!앙 지뢰띠", value="단순반응", inline=True)
+        embed.add_field(name="!탈모측정기", value="0~100%확률", inline=True)
+        embed.add_field(name="!누가 기침소리를 내었어", value="단순반응", inline=True)
+        embed.add_field(name="!가위바위보", value="봇과 가위바위보", inline=True)
+        embed.set_footer(text="추가 하고 싶은 명령어는 DM으로")
+        await message.channel.send(embed=embed)
 
-    if message.content == "!오마에와 모 신데이루":
-        await message.channel.send("나아니이이이")
-        
-    if message.content == "!두유워너빌더스노우맨":
-        await message.channel.send("https://www.youtube.com/watch?v=2EkTkiHeSmI")
+    if message.content.startswith("너는 이미 죽어있다"):
+        await message.channel.send("뭣이이이이이")
         
     if message.content == "!지뢰봇":
         await message.channel.send("옛설!")
