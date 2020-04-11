@@ -31,18 +31,19 @@ async def on_message(message):
         embed.add_field(name="!콜라", value="코카콜라vs펩시", inline=True)
         embed.add_field(name="!니 내 누군지 아니", value="단순반응", inline=True)
         embed.add_field(name="!앙 지뢰띠", value="단순반응", inline=True)
-        embed.add_field(name="!탈모측정기", value="0~100%확률", inline=True)
+        embed.add_field(name="!탈모측정기 (이름)", value="0~100%확률", inline=True)
         embed.add_field(name="!누가 기침소리를 내었어", value="단순반응", inline=True)
         embed.add_field(name="!가위바위보", value="봇과 가위바위보", inline=True)
+        embed.add_field(name="!슬롯머신", value="슬롯머신을 돌립니다", inline=True)
         embed.set_footer(text="추가 하고 싶은 명령어는 DM으로")
         await message.channel.send(embed=embed)
 
     if message.content.startswith("너는 이미 죽어있다"):
         await message.channel.send("뭣이이이이이")
-        
+
     if message.content == "!지뢰봇":
         await message.channel.send("옛설!")
-        
+
     if message.content == "!콜라":
         a = randint(0,1)
         if a == 0:
@@ -58,8 +59,10 @@ async def on_message(message):
 
     if message.content == "!니 내 누군지 아니":
         await message.channel.send("값 저장도 안하고 대답만 하는 봇인데 그거까지 알아야겠니")
+        
     if message.content == "!앙 지뢰띠":
         await message.channel.send("앙 지뢰봇")
+
     if message.content == "!탈모측정기":
         b = randint(0,10)
         await message.channel.send("너님은..")
@@ -95,6 +98,7 @@ async def on_message(message):
             if a == 2:
                 await message.channel.send("보!")
                 await message.channel.send("푸하핳")
+
     if message.content == "!보":
             a = randint(0,2)
             if a == 0:
@@ -106,6 +110,23 @@ async def on_message(message):
             if a == 2:
                 await message.channel.send("보!")
                 await message.channel.send("훗.. 강하군..")
+    
+    if message.content == "!슬롯머신":
+        message = message.channel
+
+        r1 = randint(0,5)
+        r2 = randint(0,5)
+        r3 = randint(0,5)
+        shape = ['[☆]','[♤]','[♡]','[♧]','[★]','[7]']
+
+        await message.send(shape[r1])
+        await message.send(shape[r2])
+        await message.send(shape[r3])
+
+        if (r1 == r2 and r2 == r3):
+            await message.send("★ JACKPOT! ★")
+        else:
+            await message.send("FAILED")
 
     
 access_token = os.environ["BOT_TOKEN"]
