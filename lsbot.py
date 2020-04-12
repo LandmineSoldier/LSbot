@@ -125,6 +125,8 @@ async def on_message(message):
 
         if (r1 == r2 and r2 == r3):
             await message.send("★ JACKPOT! ★")
+            if (r1 == 5)
+                await message.send('지뢰군인 개인톡 또는 DM으로 증거사진을 보내주시면 컵라면 기프티콘이!')
         else:
             await message.send("FAILED")
 
