@@ -129,7 +129,25 @@ async def on_message(message):
                 #await message.send('지뢰군인 개인톡 또는 DM으로 증거사진을 보내주시면 컵라면 기프티콘이!')
         else:
             await message.send("FAILED")
-
+            
+    if message.content == "!러시안룰렛":
+        r = randint(1,6)
+        count = 1
+        await message.channel.send("슉")
+        await message.channel.send("드르륵")
+        await message.channel.send("장전완료!")
+        channel = message.channel
+        for count in range(6):
+            def check(m):
+                return m.content == '빵' and m.channel == channel
+            try : 
+                await client.wait_for('message', check=check)
+            except asyncio.TimeoutError:
+                break
+            else:
+                if r == count:
+                    await message.channel.send('덷')
+            count += 1
     
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
