@@ -35,6 +35,7 @@ async def on_message(message):
         embed.add_field(name="!누가 기침소리를 내었어", value="단순반응", inline=True)
         embed.add_field(name="!가위바위보", value="봇과 가위바위보", inline=True)
         embed.add_field(name="!슬롯머신", value="슬롯머신을 돌립니다", inline=True)
+        embed.add_field(name="!러시안룰렛", value="빵을 외쳐주세요!", inline=True)
         embed.set_footer(text="추가 하고 싶은 명령어는 DM으로")
         await message.channel.send(embed=embed)
 
