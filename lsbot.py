@@ -150,13 +150,13 @@ async def on_message(message):
                     await message.channel.send('덷')
             count += 1
     
-    if message.content == "엄":
+    """if message.content == "엄":
         embed=discord.Embed(title="엄", description="", color=0xff0000)
         await message.channel.send(embed=embed)
         embed=discord.Embed(title="준", description="", color=0xffff00)
         await message.channel.send(embed=embed)
         embed=discord.Embed(title="식", description="", color=0x0083FF)
-        await message.channel.send(embed=embed)
+        await message.channel.send(embed=embed)"""
     
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
