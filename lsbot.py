@@ -36,6 +36,7 @@ async def on_message(message):
         embed.add_field(name="!가위바위보", value="봇과 가위바위보", inline=True)
         embed.add_field(name="!슬롯머신", value="슬롯머신을 돌립니다", inline=True)
         embed.add_field(name="!러시안룰렛", value="빵을 외쳐주세요!", inline=True)
+        embed.add_field(name="엄", value="엄", inline=True)
         embed.set_footer(text="추가 하고 싶은 명령어는 DM으로")
         await message.channel.send(embed=embed)
 
@@ -126,11 +127,10 @@ async def on_message(message):
 
         if (r1 == r2 and r2 == r3):
             await message.send("★ JACKPOT! ★")
-            #if (r1 == 5):
-                #await message.send('지뢰군인 개인톡 또는 DM으로 증거사진을 보내주시면 컵라면 기프티콘이!')
         else:
             await message.send("FAILED")
-            
+
+
     if message.content == "!러시안룰렛":
         r = randint(1,6)
         count = 1
@@ -149,6 +149,14 @@ async def on_message(message):
                 if r == count:
                     await message.channel.send('덷')
             count += 1
+    
+    if message.content == "엄":
+        embed=discord.Embed(title="엄", description="", color=0xff0000)
+        await message.channel.send(embed=embed)
+        embed=discord.Embed(title="준", description="", color=0xffff00)
+        await message.channel.send(embed=embed)
+        embed=discord.Embed(title="식", description="", color=0x0083FF)
+        await message.channel.send(embed=embed)
     
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
